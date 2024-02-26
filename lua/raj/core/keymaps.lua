@@ -25,8 +25,10 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<leader>tn", ":tabnew<CR>") -- open a new tab
+keymap.set("n", "<leader>ts", ":tabnew ") -- opens a new tab but need to mention the file name
+keymap.set("n", "<leader><leader>", ":tabnext#<CR>") -- switch to last opened tab
 
 ----------------------
 -- Plugin Keybinds
@@ -48,3 +50,15 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 --save---
 keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("i", "<C-s>", "<cmd>w<CR>")
+
+-- buffers
+keymap.set("n", "<leader>b", ":ls<CR>") --gives the list of buffer
+keymap.set("n", "<leader>bn", ":bnext<CR>") -- moves to the next buffer
+keymap.set("n", "<leader>bp", ":bprevious<CR>") -- moves to the previous buffer
+keymap.set("n", "<leader>bd", ":%bdelete<CR>") -- deletes all the buffer from the list
+
+--toggle the wrap--
+keymap.set("n", "<M-z>", ":set wrap!<CR>")
+
+-- some tips and tricks
+-- when you press ctrl+t in the treesitter file explorer it will open the file in a new tab
